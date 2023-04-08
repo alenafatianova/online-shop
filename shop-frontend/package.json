@@ -1,6 +1,6 @@
 {
-  "homepage": "https://alenafatianova.online-shop.io/",
-  "name": "ecommerce-shop",
+  "homepage": "https://alenafatianova.github.io/online-shop/",
+  "name": "online-shop",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
