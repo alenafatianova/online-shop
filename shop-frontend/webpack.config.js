@@ -4,7 +4,7 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin')
 
 module.exports = {
-    entry: './src/script.tsx',
+    entry: './src/index.tsx',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.[contenthash].js',
@@ -38,21 +38,6 @@ module.exports = {
               },
             ],
           }
-
-          // {
-          //   test: /\.(png|jpe?g|gif)$/i,
-          //   use: [
-          //     'file-loader',
-          //     'image-webpack-loader',
-          //     {
-          //       loader: 'image-webpack-loader',
-          //       options: {
-          //         disable: true, // webpack@2.x and newer
-          //       },
-          //     }
-          //   ]
-          // },
-
         ],
       },
     plugins: [
