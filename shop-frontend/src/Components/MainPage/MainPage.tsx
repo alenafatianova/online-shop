@@ -11,7 +11,9 @@ export const MainPage: React.FC = () => {
         <div className='main-page-container'>
             <div className='image-container'>
                 <img src={ mist } alt="Мусс" className='mist-image'/>
-                <img src={ mousse } alt="Масло для загара" className='mousse-image'/>
+            </div>
+            <div>
+            <img src={ mousse } alt="Масло для загара" className='mousse-image'/>
             </div>
             <div className='description'>
                 <h3>Безопасный загар и идеальный результат</h3>
