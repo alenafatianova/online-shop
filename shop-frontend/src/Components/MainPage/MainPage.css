@@ -6,20 +6,20 @@
 }
 
 .mist-image {
-    height: 450px;
-    width: 430px;
+    height: 350px;
+    width: 330px;
     margin-top: 150px;
 }
 
 .mousse-image {
-    height: 550px;
-    width: 450px;
-    margin-left: 300px;
+    height: 350px;
+    width: 250px;
+    margin-top: 80px;
 
 }
 
 .image-container {
-    margin-left: 150px;
+    margin-left: 130px;
 }
 
 .title {
@@ -37,7 +37,7 @@
 }
 
 .description {
-    font-size: 20px;
+    font-size: 18px;
     font-family: var(--font);
     margin-top: 190px;
     margin-right: 100px;
@@ -50,5 +50,5 @@
 }
 
 .button-component {
-    margin-top: 200px;
+    margin-top: 60px;
 }
