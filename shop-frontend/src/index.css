@@ -4,12 +4,14 @@
   --color-primary: #726262;
   --color-dark: #2E2C2C;
   --color-pink: #FDF8F8;
+  --font: 'Cormorant Garamond', serif;
 }
-
 
 *:not(svg *) {
   all: unset;
   display: revert;
 }
 
-
+body {
+  background-color: var(--color-pink);
+}

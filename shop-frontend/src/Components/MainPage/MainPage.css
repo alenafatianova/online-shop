@@ -1,0 +1,54 @@
+.main-page-container {
+    background-color: var(--color-pink);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.mist-image {
+    height: 450px;
+    width: 430px;
+    margin-top: 150px;
+}
+
+.mousse-image {
+    height: 550px;
+    width: 450px;
+    margin-left: 300px;
+
+}
+
+.image-container {
+    margin-left: 150px;
+}
+
+.title {
+    font-size: 95px;
+    font-family: var(--font);
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-top: 35px;
+    text-align: center;
+    letter-spacing: 50px;
+    font-weight: 500;
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+.description {
+    font-size: 20px;
+    font-family: var(--font);
+    margin-top: 190px;
+    margin-right: 100px;
+    letter-spacing: 3px;
+    word-wrap: break-word;
+}
+
+.description > h3 {
+    padding: 20px 0;
+}
+
+.button-component {
+    margin-top: 200px;
+}

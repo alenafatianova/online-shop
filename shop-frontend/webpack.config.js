@@ -19,7 +19,7 @@ module.exports = {
           },
           {
             test: /\.css$/,
-            use: ['style-loader', 'css-loader'],
+            use: ['style-loader', 'css-loader', 'image-webpack-loader'],
           },
           {
             test: /\.svg$/,
@@ -30,6 +30,29 @@ module.exports = {
             use: 'ts-loader',
             exclude: /node_modules/,
           },
+          {
+            test: /\.(png|jpe?g|gif)$/i,
+            use: [
+              {
+                loader: 'file-loader',
+              },
+            ],
+          }
+
+          // {
+          //   test: /\.(png|jpe?g|gif)$/i,
+          //   use: [
+          //     'file-loader',
+          //     'image-webpack-loader',
+          //     {
+          //       loader: 'image-webpack-loader',
+          //       options: {
+          //         disable: true, // webpack@2.x and newer
+          //       },
+          //     }
+          //   ]
+          // },
+
         ],
       },
     plugins: [
