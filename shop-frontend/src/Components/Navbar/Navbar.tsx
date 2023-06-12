@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import logo from '../../assets/logo.svg'
 import { SearchOutlined, UserOutlined, HeartOutlined, ShoppingOutlined } from '@ant-design/icons';
 import './Navbar.css'
 import { NavLink } from 'react-router-dom';
+import { SpinningText } from './SpinningText/SpinningText';
 
 export const Navbar: React.FC = () => {
   return (
@@ -13,9 +14,7 @@ export const Navbar: React.FC = () => {
                 <span>Доставка и оплата</span>
                 <span>Как пользоваться</span>
             </div>
-            <div>
-                <img src={logo} alt="Logo" className='logo-image' />
-            </div>
+            <SpinningText />
             <div className='icons-container'>
                 <SearchOutlined className='search-icon' color='red'/>
                 <UserOutlined className='user-icon' />
