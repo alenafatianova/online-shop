@@ -1,24 +1,24 @@
 .button-container {
-    position: relative;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .circle {
-    position: absolute;
-    border: 1px solid var(--color-primary);
-    width: 70px;
-    height: 70px;
-    border-radius: 112px;
+  position: absolute;
+  border: 1px solid var(--color-font);
+  width: 70px;
+  height: 70px;
+  border-radius: 112px;
 }
 
 .button-content {
-    align-items: center;
-    display: flex;
-    margin-left: 50px;
+  align-items: center;
+  display: flex;
+  margin-left: 50px;
 }
 
 .arrow {
-    width: 110px;
+  width: 110px;
 }

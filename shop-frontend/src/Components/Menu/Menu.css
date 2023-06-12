@@ -1,0 +1,12 @@
+.icons-container {
+  margin-right: 115px;
+}
+
+.search-icon,
+.user-icon,
+.wishlist-icon,
+.cart-icon > svg {
+  font-size: 20px;
+  margin: 0 30px;
+  cursor: pointer;
+}

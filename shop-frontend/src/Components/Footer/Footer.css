@@ -1,0 +1,57 @@
+.footer-container {
+  display: flex;
+  color: var(--color-font);
+  justify-content: space-around;
+  margin: 45px 0;
+}
+
+.about-menu-block,
+.products-menu-block {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.about-menu-block > a {
+  padding: 8px 0;
+}
+
+.products-menu-block > a {
+  padding: 8px 0;
+}
+
+.rights-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.rights-menu > a {
+  padding: 8px 0;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footer-logo {
+  width: 90px;
+}
+
+.socials-menu-block {
+  display: flex;
+  cursor: pointer;
+}
+
+.sale-link {
+  color: rgb(255 95 36);
+  font-weight: 700;
+}
+
+.instagram-icon {
+  width: 30px;
+}
+
+.facebook-icon {
+  width: 25px;
+}
