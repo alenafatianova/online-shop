@@ -1,19 +1,19 @@
-import React from 'react';
-import { Navbar } from '../Navbar/Navbar';
-import './App.css';
-import { Route, Routes } from 'react-router';
-import { MainPage } from '../MainPage/MainPage';
-import { NewProducts } from '../Bestsellers/Bestsellers';
-
+import React from 'react'
+import './App.css'
+import { MainPage } from '../MainPage/MainPage'
+import { NewProducts } from '../Bestsellers/Bestsellers'
+import { Header } from '../Header/Header'
+import { Footer } from '../Footer/Footer'
 
 function App() {
   return (
     <>
-     <Navbar/>
+      <Header />
       <MainPage />
-      <NewProducts/>
+      <NewProducts />
+      <Footer />
     </>
-  );
+  )
 }
 
-export default App;
+export default App

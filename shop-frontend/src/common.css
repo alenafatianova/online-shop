@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Rubik:ital,wght@0,500;0,700;0,900;1,400&display=swap");
+
+:root {
+  --color-font: #726262;
+  --color-dark: #2e2c2c;
+  --color-pink: #fdf8f8;
+  --font: "Cormorant Garamond", serif;
+}
+
+*:not(svg *) {
+  all: unset;
+  display: revert;
+  outline: revert;
+}
+
+body {
+  background-color: var(--color-pink);
+}

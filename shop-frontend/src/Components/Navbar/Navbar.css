@@ -1,34 +1,13 @@
-.navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--color-pink);
-}
-
 .menu-list {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 600;
-    font-size: 16px;
-    text-transform: uppercase;
-    margin-left: 82px;
-    color: var(--color-primary);
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-left: 82px;
+  color: var(--color-font);
 }
 
 .menu-list > span {
-    padding: 40px;
-    cursor: pointer;
-}
-
-.icons-container {
-    margin-right: 115px;
-}
-
-.search-icon, .user-icon, .wishlist-icon, .cart-icon > svg {
-    font-size: 20px;
-    margin: 0 30px;
-    cursor: pointer;
-}
-
-.logo-image {
-    margin: 35px 0;
+  padding: 40px;
+  cursor: pointer;
 }
