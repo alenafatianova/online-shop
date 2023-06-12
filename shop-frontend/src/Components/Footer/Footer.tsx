@@ -10,21 +10,21 @@ export const Footer = () => {
           <img src={require('../../assets/curvedText.svg')} alt="Логотип бренда St.Moriz" className="footer-logo" />
         </Link>
         <div className="socials-menu-block">
-          <a href={'https://www.instagram.com/stmoriz/'} className="instagram-link">
+          <a href={'https://www.instagram.com/stmoriz/'} target='_blank' rel='noopener noreferrer' className="instagram-link">
             <img
               src={require('../../assets/instagram.svg')}
               alt="Иконка на инстаграм бренда"
               className="instagram-icon"
             />
           </a>
-          <a href={'https://www.facebook.com/St.Moriz.Tan/'} className="facebook">
+          <a href={'https://www.facebook.com/St.Moriz.Tan/'} target='_blank' rel='noopener noreferrer' className="facebook">
             <img
               src={require('../../assets/facebook.svg')}
               alt="Иконка на группу в сети Фейсбук"
               className="facebook-icon"
             />
           </a>
-          <a type="email" href={'buy@stmoriz.com'} />
+          <a type="email" target='_blank' rel='noopener noreferrer' href={'buy@stmoriz.com'} />
         </div>
         <div className="about-menu-block">
           <Link to={'/about'}>Бренд St. Moriz</Link>
