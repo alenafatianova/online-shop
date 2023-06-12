@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import { MainPage } from '../MainPage/MainPage'
-import { NewProducts } from '../Bestsellers/Bestsellers'
+import { NewProducts } from '../NewProducts/NewProducts'
 import { Header } from '../Header/Header'
 import { Footer } from '../Footer/Footer'
 
@@ -10,7 +10,6 @@ function App() {
     <>
       <Header />
       <MainPage />
-      <NewProducts />
       <Footer />
     </>
   )

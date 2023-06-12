@@ -1,0 +1,45 @@
+.instagram-section {
+  background-color: var(--color-white);
+  margin: 150px 0;
+  padding: 60px 0;
+}
+
+.instagram-section-container {
+  display: flex;
+  justify-content: space-around;
+  color: var(--color-font);
+  align-items: center;
+  padding: 30px 0;
+}
+
+.section-title {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font);
+}
+
+.instagram-text {
+  text-transform: uppercase;
+  padding: 8px 0;
+  font-size: 26px;
+}
+
+.title-text {
+  font-size: 18px;
+}
+
+.signup-button {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.instagram-gallery {
+  display: flex;
+  justify-content: space-around;
+}
+
+.instagram-gallery > img {
+  width: 380px;
+  height: 380px;
+}

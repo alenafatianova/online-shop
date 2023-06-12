@@ -1,26 +1,3 @@
-.main-page-container {
-  background-color: var(--color-pink);
-  display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
-}
-
-.mist-image {
-  height: 350px;
-  width: 330px;
-  margin-top: 150px;
-}
-
-.mousse-image {
-  height: 350px;
-  width: 250px;
-  margin-top: 80px;
-}
-
-.image-container {
-  margin-left: 130px;
-}
-
 .title {
   font-size: 95px;
   font-family: var(--font);
@@ -33,21 +10,4 @@
   position: absolute;
   width: 100%;
   left: 0;
-}
-
-.description {
-  font-size: 18px;
-  font-family: var(--font);
-  margin-top: 190px;
-  margin-right: 100px;
-  letter-spacing: 3px;
-  word-wrap: break-word;
-}
-
-.description > h3 {
-  padding: 20px 0;
-}
-
-.button-component {
-  margin-top: 60px;
 }

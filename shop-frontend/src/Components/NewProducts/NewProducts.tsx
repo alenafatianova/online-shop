@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './Bestsellers.css'
+import './NewProducts.css'
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@ant-design/icons'
 import { slides } from './helper'
 

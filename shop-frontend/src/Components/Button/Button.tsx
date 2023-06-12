@@ -4,14 +4,16 @@ import { ArrowRightOutlined } from '@ant-design/icons'
 
 interface IButton {
   title: string
+  className?: string
+  onClick?: () => void
 }
 
-export const Button: React.FC<IButton> = ({ title }) => {
+export const Button: React.FC<IButton> = ({ title, className, onClick }) => {
   return (
     <div className="button-container">
-      <span>{title}</span>
+      <span className={className}>{title}</span>
       <div className="button-content">
-        <button className="circle"></button>
+        <button className="circle" onClick={onClick}></button>
         <ArrowRightOutlined className="arrow" />
       </div>
     </div>
