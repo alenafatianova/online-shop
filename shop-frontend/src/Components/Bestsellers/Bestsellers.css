@@ -1,0 +1,14 @@
+.popular-items-title {
+    font-size: 14px;
+}
+
+.bestsellers-title {
+    text-transform: uppercase;
+    font-family: var(--font);
+    color: var(--color-font);
+    display: grid;
+}
+
+.bestsellers-title-span {
+    font-size: 26px;
+}

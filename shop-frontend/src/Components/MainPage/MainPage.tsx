@@ -5,6 +5,7 @@ import { NewProducts } from '../NewProducts/NewProducts'
 import { CatalogueSection } from '../CatalogueSection/CatalogueSection'
 import { UsageVideo } from '../UsageVideo/UsageVideo'
 import { Banner } from '../Banner/Banner'
+import { Bestsellers } from '../Bestsellers/Bestsellers'
 
 export const MainPage: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ export const MainPage: React.FC = () => {
       <div className="main-page-container">
         <CatalogueSection />
         <NewProducts />
+        <Bestsellers />
         <Banner />
         <UsageVideo />
         <InstagramSection />
