@@ -15,15 +15,19 @@ export const Bestsellers = () => {
 
   return (
     <div className='bestsellers'>
-        <div className="bestsellers-title">
+        <div className="bestsellers-section-title">
             <span className='popular-items-title'>Популярные товары</span>
             <span className='bestsellers-title-span'>Бестселлеры</span>
-            {bestsellers.map((product) => {
+        </div>
+        {bestsellers.map((product) => {
               return (
-                <div key={product.id}>{product.title}</div>
+                <div key={product.id} className='bestsellers-gallery'>
+                  <div className='bestseler-product-img'><img src={product.image} alt="Фотография продукта" /></div>
+                  <div className='bestseller-product-title-container'><span className='bestseller-product-title'>{product.title}</span></div>
+                  <div className='bestseller-product-price'><span>{product.price}</span></div>
+                </div>
               )
             })}
-        </div>
     </div>
   )
 }

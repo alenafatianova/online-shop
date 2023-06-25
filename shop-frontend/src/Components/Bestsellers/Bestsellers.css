@@ -1,14 +1,41 @@
+.bestsellers {
+    font-family: var(--font);
+    color: var(--color-font);
+    display: grid;
+    justify-content: space-around;
+    margin: 150px 0;
+    background-color: var(--color-white);
+}
+
 .popular-items-title {
     font-size: 14px;
 }
 
-.bestsellers-title {
-    text-transform: uppercase;
-    font-family: var(--font);
-    color: var(--color-font);
+.bestsellers-section-title {
     display: grid;
+    margin-top: 40px;
+    text-transform: uppercase;
 }
 
 .bestsellers-title-span {
     font-size: 26px;
+    letter-spacing: 3px;
+    padding-top: 10px;
+    font-weight: 500;
+}
+
+.bestsellers-gallery {
+    grid-row: span 1/5;
+    margin: 80px 0;
+    display: grid;
+    justify-items: center;
+}
+
+.bestseller-product-title {
+    text-transform: none;
+    font-size: 16px;
+}
+
+.bestseller-product-price > span {
+    text-align: start;
 }
