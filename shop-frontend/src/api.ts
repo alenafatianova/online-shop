@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { collection, getDocs, getFirestore, initializeFirestore } from "firebase/firestore";
-import { BestellersType } from "./Components/types";
+import { ProductType } from "./Components/types";
 
 
 const firebaseConfig = {
@@ -24,12 +24,12 @@ export const initializeAPI = () => {
     initializeApp(firebaseConfig)
 }
 
-export const getBestsellers = async (): Promise<BestellersType[]> => {
+export const getBestsellers = async (): Promise<ProductType[]> => {
     const querySnapshot = await getDocs(collection(db, "bestsellers"));
-    const bestsellers: BestellersType[] = []
+    const bestsellers: ProductType[] = []
     
     querySnapshot.forEach((doc) => {
-    const data = doc.data() as Omit<BestellersType, 'id'>
+    const data = doc.data() as Omit<ProductType, 'id'>
     bestsellers.push({
         id: doc.id,
         ...data
@@ -39,5 +39,9 @@ export const getBestsellers = async (): Promise<BestellersType[]> => {
 
   return bestsellers
 }
-
 getBestsellers()
+
+export const getNewies = async (): Promise<ProductType[]> => {
+    const newies: ProductType[] = []
+    return newies
+}

@@ -36,6 +36,10 @@
     font-size: 16px;
 }
 
-.bestseller-product-price > span {
-    text-align: start;
+.bestseller-product-title-container {
+    display: inline-block;
+}
+
+.bestseller-product-title-container > span {
+    line-break: strict;
 }
