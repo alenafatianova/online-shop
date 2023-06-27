@@ -1,45 +1,45 @@
 .bestsellers {
-    font-family: var(--font);
-    color: var(--color-font);
-    display: grid;
-    justify-content: space-around;
-    margin: 150px 0;
-    background-color: var(--color-white);
+  font-family: var(--font);
+  color: var(--color-font);
+  display: grid;
+  justify-content: space-around;
+  margin: 150px 0;
+  background-color: var(--color-white);
 }
 
 .popular-items-title {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .bestsellers-section-title {
-    display: grid;
-    margin-top: 40px;
-    text-transform: uppercase;
+  display: grid;
+  margin-top: 40px;
+  text-transform: uppercase;
 }
 
 .bestsellers-title-span {
-    font-size: 26px;
-    letter-spacing: 3px;
-    padding-top: 10px;
-    font-weight: 500;
+  font-size: 26px;
+  letter-spacing: 3px;
+  padding-top: 10px;
+  font-weight: 500;
 }
 
 .bestsellers-gallery {
-    grid-row: span 1/5;
-    margin: 80px 0;
-    display: grid;
-    justify-items: center;
+  grid-row: span 1/5;
+  margin: 80px 0;
+  display: grid;
+  justify-items: center;
 }
 
 .bestseller-product-title {
-    text-transform: none;
-    font-size: 16px;
+  text-transform: none;
+  font-size: 16px;
 }
 
 .bestseller-product-title-container {
-    display: inline-block;
+  display: inline-block;
 }
 
 .bestseller-product-title-container > span {
-    line-break: strict;
+  line-break: strict;
 }

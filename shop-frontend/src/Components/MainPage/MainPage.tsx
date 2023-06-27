@@ -15,7 +15,7 @@ export const MainPage: React.FC = () => {
 
   // get bestsellers:
   useEffect(() => {
-    (async () => {
+    ;(async () => {
       const bestsellers = await getBestsellers()
       setBestsellers(bestsellers)
     })()
@@ -23,13 +23,11 @@ export const MainPage: React.FC = () => {
 
   // get new products:
   useEffect(() => {
-    (async () => {
+    ;(async () => {
       const newProducts = await getNewies()
       setNewies(newProducts)
     })()
   }, [newies])
-
-
 
   return (
     <section>
@@ -37,7 +35,7 @@ export const MainPage: React.FC = () => {
       <div className="main-page-container">
         <CatalogueSection />
         <NewProducts />
-        <Products  products={newies} shortDescription={'Новая коллекция'} header={'Новинки'} />
+        <Products products={newies} shortDescription={'Новая коллекция'} header={'Новинки'} />
         <Products products={bestsellers} shortDescription={'Популярные товары'} header={'Бестселлеры'} />
         <Banner />
         <UsageVideo />

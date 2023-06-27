@@ -4,12 +4,11 @@ import { storage } from '../../api'
 // import { getBanner } from '../../api'
 
 export const Banner = () => {
-const [bannerImage, setBannerImage] = useState('')
+  const [bannerImage, setBannerImage] = useState('')
 
   useEffect(() => {
     console.log(storage)
   }, [])
- 
 
   return (
     <div className="banner">

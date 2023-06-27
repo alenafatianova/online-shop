@@ -6,7 +6,6 @@ import './common.css'
 import reportWebVitals from '../../reportWebVitals'
 import { initializeAPI } from '../api'
 
-
 initializeAPI()
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
