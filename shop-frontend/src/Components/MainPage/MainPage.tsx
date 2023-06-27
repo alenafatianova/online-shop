@@ -6,13 +6,14 @@ import { CatalogueSection } from '../CatalogueSection/CatalogueSection'
 import { UsageVideo } from '../UsageVideo/UsageVideo'
 import { Banner } from '../Banner/Banner'
 import { Products } from '../Products/Products'
-import { getBestsellers } from '../../api'
+import { getBestsellers, getNewies } from '../../api'
 import { ProductType } from '../types'
 
 export const MainPage: React.FC = () => {
   const [bestsellers, setBestsellers] = useState<ProductType[]>([])
   const [newies, setNewies] = useState<ProductType[]>([])
 
+  // get bestsellers:
   useEffect(() => {
     (async () => {
       const bestsellers = await getBestsellers()
@@ -20,8 +21,12 @@ export const MainPage: React.FC = () => {
     })()
   }, [bestsellers])
 
+  // get new products:
   useEffect(() => {
-
+    (async () => {
+      const newProducts = await getNewies()
+      setNewies(newProducts)
+    })()
   }, [newies])
 
 

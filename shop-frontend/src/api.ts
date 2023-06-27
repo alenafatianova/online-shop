@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { collection, getDocs, getFirestore, initializeFirestore } from "firebase/firestore";
+import { collection, getDocs, initializeFirestore } from "firebase/firestore";
+import { getStorage, ref } from 'firebase/storage'
 import { ProductType } from "./Components/types";
 
 
@@ -18,6 +19,7 @@ const app = initializeApp(firebaseConfig)
 const db = initializeFirestore(app, {
     experimentalForceLongPolling: true,
 })
+export const storage = getStorage(app)
 
 
 export const initializeAPI = () => {
@@ -39,9 +41,26 @@ export const getBestsellers = async (): Promise<ProductType[]> => {
 
   return bestsellers
 }
-getBestsellers()
 
 export const getNewies = async (): Promise<ProductType[]> => {
+    const querySnapshot = await getDocs(collection(db, "newProducts"));
     const newies: ProductType[] = []
+
+    querySnapshot.forEach((doc) => {
+        const newProducts = doc.data() as Omit<ProductType, 'id'>
+        newies.push({
+            id: doc.id,
+            ...newProducts
+        })
+    })
     return newies
 }
+
+// export const fetchImages = async () => {
+//     let result = await 
+// }
+
+// export const getBanner = async (): Promise<string> => {
+//     const listRef = ref(storage, "banner/banner1.jpg")
+//     return listRef
+// }

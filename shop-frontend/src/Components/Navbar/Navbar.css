@@ -5,9 +5,10 @@
   text-transform: uppercase;
   margin-left: 82px;
   color: var(--color-font);
-}
-
-.menu-list > span {
-  padding: 40px;
   cursor: pointer;
 }
+
+.menu-list > a {
+  padding: 40px;
+}
+

@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Banner.css'
+import { storage } from '../../api'
+// import { getBanner } from '../../api'
 
 export const Banner = () => {
+const [bannerImage, setBannerImage] = useState('')
+
+  useEffect(() => {
+    console.log(storage)
+  }, [])
+ 
+
   return (
     <div className="banner">
       <div className="banner-text-container">
@@ -11,9 +20,7 @@ export const Banner = () => {
       <div className="image-container">
         <img
           className="banner-image"
-          src={
-            'https://firebasestorage.googleapis.com/v0/b/st-moriz.appspot.com/o/banner1.jpg?alt=media&token=f1734c5e-3240-4a66-a588-de82763b9941&_gl=1*14p3flz*_ga*MTUxNDA2MjkwOS4xNjc5ODYwNDM4*_ga_CW55HF8NVT*MTY4NjY0NzE3Ni4yMy4xLjE2ODY2NTEwMTcuMC4wLjA.'
-          }
+          src={'gs://st-moriz.appspot.com/banner1.jpg'}
           alt="Изображение девушки на бежевом фоне"
         />
       </div>
