@@ -33,7 +33,7 @@ export const getBestsellers = async (): Promise<ProductType[]> => {
       id: doc.id,
       ...data,
     })
-    console.log(`${doc.id} => ${doc.data()}`)
+    // console.log(`${doc.id} => ${doc.data()}`)
   })
 
   return bestsellers
@@ -54,10 +54,5 @@ export const getNewies = async (): Promise<ProductType[]> => {
 }
 
 // export const fetchImages = async () => {
-//     let result = await
-// }
-
-// export const getBanner = async (): Promise<string> => {
-//     const listRef = ref(storage, "banner/banner1.jpg")
-//     return listRef
+//     let result = await db.app.
 // }

@@ -19,7 +19,9 @@ export const Banner = () => {
       <div className="image-container">
         <img
           className="banner-image"
-          src={'gs://st-moriz.appspot.com/banner1.jpg'}
+          src={
+            'https://firebasestorage.googleapis.com/v0/b/st-moriz.appspot.com/o/banner%2Fbanner1.jpg?alt=media&token=34237bda-795a-42f8-b215-8a711fed13ff'
+          }
           alt="Изображение девушки на бежевом фоне"
         />
       </div>
