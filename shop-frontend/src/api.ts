@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app'
 import { collection, getDocs, initializeFirestore } from 'firebase/firestore'
-import { getStorage, ref } from 'firebase/storage'
+import { StorageReference, getDownloadURL, getStorage, list, ref } from 'firebase/storage'
 import { ProductType } from './Components/types'
 
 const firebaseConfig = {
@@ -14,9 +14,11 @@ const firebaseConfig = {
 }
 
 const app = initializeApp(firebaseConfig)
+
 const db = initializeFirestore(app, {
   experimentalForceLongPolling: true,
 })
+
 export const storage = getStorage(app)
 
 export const initializeAPI = () => {
@@ -53,6 +55,19 @@ export const getNewies = async (): Promise<ProductType[]> => {
   return newies
 }
 
-// export const fetchImages = async () => {
-//     let result = await db.app.
-// }
+export const getInstagramPhotos = async (): Promise<any> => {
+  const storage = getStorage()
+  const imagesRef = await ref(storage, 'instagramUsers/peel_user.jpg')
+  return imagesRef
+}
+
+// export const getBannerImage = async (): Promise<any> => {
+//   const storage = getStorage()
+//   const bannerRef = ref(storage, "banner/banner1.jpg")
+  
+//  await getDownloadURL(bannerRef).then((url) => {
+//     const img = url
+//     console.log('img', img)
+//   })
+//   return bannerRef
+// } 

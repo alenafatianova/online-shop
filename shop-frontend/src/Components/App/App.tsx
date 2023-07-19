@@ -4,7 +4,7 @@ import { MainPage } from '../MainPage/MainPage'
 import { Header } from '../Header/Header'
 import { Footer } from '../Footer/Footer'
 import { HowToUsePage } from '../HowToUsePage/HowToUsePage'
-import { Navigate, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 
 const App = () => {
   return (

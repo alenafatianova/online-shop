@@ -19,7 +19,7 @@ export const MainPage: React.FC = () => {
       const bestsellers = await getBestsellers()
       setBestsellers(bestsellers)
     })()
-  }, [bestsellers])
+  }, [])
 
   // get new products:
   useEffect(() => {
@@ -27,7 +27,7 @@ export const MainPage: React.FC = () => {
       const newProducts = await getNewies()
       setNewies(newProducts)
     })()
-  }, [newies])
+  }, [])
 
   return (
     <section>
