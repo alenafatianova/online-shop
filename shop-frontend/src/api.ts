@@ -1,10 +1,11 @@
 import { initializeApp } from 'firebase/app'
 import { collection, getDocs, initializeFirestore } from 'firebase/firestore'
-import { StorageReference, getDownloadURL, getStorage, list, ref } from 'firebase/storage'
+import { getStorage, ref } from 'firebase/storage'
 import { ProductType } from './Components/types'
 
+
 const firebaseConfig = {
-  apiKey: 'AIzaSyCkfm1EdqfwxYo39Hap8CPjB41OJX7aUw4',
+  apiKey: process.env.REACT_APP_API_KEY,
   authDomain: 'st-moriz.firebaseapp.com',
   projectId: 'st-moriz',
   storageBucket: 'st-moriz.appspot.com',
@@ -60,14 +61,3 @@ export const getInstagramPhotos = async (): Promise<any> => {
   const imagesRef = await ref(storage, 'instagramUsers/peel_user.jpg')
   return imagesRef
 }
-
-// export const getBannerImage = async (): Promise<any> => {
-//   const storage = getStorage()
-//   const bannerRef = ref(storage, "banner/banner1.jpg")
-  
-//  await getDownloadURL(bannerRef).then((url) => {
-//     const img = url
-//     console.log('img', img)
-//   })
-//   return bannerRef
-// } 
