@@ -1,7 +1,7 @@
 import { initializeApp } from 'firebase/app'
 import { collection, getDocs, initializeFirestore } from 'firebase/firestore'
 import { getStorage, ref } from 'firebase/storage'
-import { ProductType } from './Components/types'
+import { ImagesType, ProductType } from './Components/types'
 
 
 const firebaseConfig = {
@@ -56,8 +56,16 @@ export const getNewies = async (): Promise<ProductType[]> => {
   return newies
 }
 
-export const getInstagramPhotos = async (): Promise<any> => {
-  const storage = getStorage()
-  const imagesRef = await ref(storage, 'instagramUsers/peel_user.jpg')
-  return imagesRef
+export const getInstagramPhotos = async (): Promise<ImagesType[]> => {
+  const querySnapshot = await getDocs(collection(db, 'instagramUsers'))
+  const usersImages: ImagesType[] = []
+
+  querySnapshot.forEach((image) => {
+    const imagesList = image.data() as Omit<ImagesType, 'id'>
+    usersImages.push({
+      id: image.id,
+      ...imagesList
+    })
+  })
+  return usersImages
 }

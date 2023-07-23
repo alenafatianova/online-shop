@@ -1,25 +1,28 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 import './InstagramSection.css'
 import { Button } from '../Button/Button'
+import { ImagesType } from '../types';
+import { getInstagramPhotos } from '../../api';
+
+
 
 export const InstagramSection = () => {
 
-  const [instagramUsers, setInstagramUsers] = useState<string[]>([])
-
-  // get instagram images 
-  // useEffect(() => {
-  //   (async () => {
-  //     const instagramUsersPhotos = await getInstagramPhotos()
-  //     setInstagramUsers(instagramUsersPhotos)
-  //   })
- 
-  // }, [])
+  const [instagramUsers, setInstagramUsers] = useState<ImagesType[]>([])
 
   const onSignupClick = () => {
     window.open('https://www.instagram.com/stmoriz/', '_blank', 'noopener, noreferrer')
   }
 
- 
+  const handleData = async () => {
+    const instagramUsersPhotos = await getInstagramPhotos()
+    setInstagramUsers(instagramUsersPhotos)
+    console.log(instagramUsersPhotos)
+  }
+
+  useEffect(() => {
+   handleData() 
+  }, [])
 
   return (
     <section className="instagram-section" aria-label="Раздел с фотографиями из Инстаграма бренда">
@@ -33,7 +36,12 @@ export const InstagramSection = () => {
         </div>
       </div>
       <div className="instagram-gallery">
-     
+     {instagramUsers.map((image) => (
+      <div className='instagram-gallery-photos' key={image.id}>
+      <img src={image.image} alt={image.description} />
+      </div>
+    
+     ))}
       </div>
     </section>
   )

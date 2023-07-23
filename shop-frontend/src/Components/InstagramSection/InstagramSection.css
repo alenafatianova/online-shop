@@ -1,7 +1,6 @@
 .instagram-section {
   background-color: var(--color-white);
-  margin: 150px 0;
-  padding: 60px 0;
+  padding: 150px 0;
 }
 
 .instagram-section-container {
@@ -39,7 +38,7 @@
   justify-content: space-around;
 }
 
-.instagram-gallery > img {
+.instagram-gallery-photos > img {
   width: 380px;
   height: 380px;
 }
