@@ -7,7 +7,6 @@ import { HowToUsePage } from '../HowToUsePage/HowToUsePage'
 import { NavLink, Route, Routes } from 'react-router-dom'
 import { DeliveryPage } from '../DeliveryPage/DeliveryPage'
 
-
 const App = () => {
   return (
     <React.Fragment>

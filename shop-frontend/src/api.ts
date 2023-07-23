@@ -3,7 +3,6 @@ import { collection, getDocs, initializeFirestore } from 'firebase/firestore'
 import { getStorage, ref } from 'firebase/storage'
 import { ImagesType, ProductType } from './Components/types'
 
-
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
   authDomain: 'st-moriz.firebaseapp.com',
@@ -64,7 +63,7 @@ export const getInstagramPhotos = async (): Promise<ImagesType[]> => {
     const imagesList = image.data() as Omit<ImagesType, 'id'>
     usersImages.push({
       id: image.id,
-      ...imagesList
+      ...imagesList,
     })
   })
   return usersImages

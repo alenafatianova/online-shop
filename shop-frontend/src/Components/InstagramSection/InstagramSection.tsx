@@ -1,13 +1,10 @@
 import React, { useEffect, useState, useCallback } from 'react'
 import './InstagramSection.css'
 import { Button } from '../Button/Button'
-import { ImagesType } from '../types';
-import { getInstagramPhotos } from '../../api';
-
-
+import { ImagesType } from '../types'
+import { getInstagramPhotos } from '../../api'
 
 export const InstagramSection = () => {
-
   const [instagramUsers, setInstagramUsers] = useState<ImagesType[]>([])
 
   const onSignupClick = () => {
@@ -21,7 +18,7 @@ export const InstagramSection = () => {
   }
 
   useEffect(() => {
-   handleData() 
+    handleData()
   }, [])
 
   return (
@@ -36,12 +33,11 @@ export const InstagramSection = () => {
         </div>
       </div>
       <div className="instagram-gallery">
-     {instagramUsers.map((image) => (
-      <div className='instagram-gallery-photos' key={image.id}>
-      <img src={image.image} alt={image.description} />
-      </div>
-    
-     ))}
+        {instagramUsers.map((image) => (
+          <div className="instagram-gallery-photos" key={image.id}>
+            <img src={image.image} alt={image.description} />
+          </div>
+        ))}
       </div>
     </section>
   )

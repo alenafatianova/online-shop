@@ -36,7 +36,9 @@ export const ProductCarousel: React.FC<CarouselType> = ({ children }) => {
       <div className="carousel-window">
         <div className="slides-container-all" style={{ transform: `translateX(${offset}px)` }}>
           {slidesImages.map((el) => {
-            return <img key={el.index} src={el.image} className="carousel-image" alt="Слайдер с изображением продукта" />
+            return (
+              <img key={el.index} src={el.image} className="carousel-image" alt="Слайдер с изображением продукта" />
+            )
           })}
         </div>
       </div>

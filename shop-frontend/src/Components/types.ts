@@ -6,7 +6,7 @@ export interface ProductType {
   volume: string
 }
 export interface ImagesType {
-  image: string,
-  description: string,
+  image: string
+  description: string
   id: string
 }
