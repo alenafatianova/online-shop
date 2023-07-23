@@ -25,26 +25,7 @@
 
 .new-products {
   display: flex;
-  justify-content: space-between;
-}
-
-.arrows-carousel {
-  position: absolute;
-  right: 150px;
-  cursor: pointer;
-}
-
-.arrow-right {
-  margin: 0 50px;
-}
-
-.image-carousel {
-  transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
-  width: 300px;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .image-carousel::-webkit-scrollbar {
@@ -52,10 +33,5 @@
 }
 
 .product-carousel {
-  width: 450px;
   display: flex;
-  flex-wrap: nowrap;
-
-  /* overflow: hidden;
-    transform: translateX(-100%); */
 }

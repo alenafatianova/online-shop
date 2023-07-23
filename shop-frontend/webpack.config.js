@@ -1,10 +1,13 @@
 const path = require('path')
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin')
 const StylelintPlugin = require('stylelint-webpack-plugin')
+const { ProvidePlugin, DefinePlugin } = require('webpack')
 
 module.exports = {
-  entry: './src/index.tsx',
+  mode: 'development',
+  entry: './src/Components/script.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.[contenthash].js',
@@ -22,7 +25,7 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'image-webpack-loader'],
       },
       {
-        test: /\.svg$/,
+        test: /\.(svg|jpg|png|webp)$/,
         type: 'asset/resource',
       },
       {
@@ -30,25 +33,23 @@ module.exports = {
         use: 'ts-loader',
         exclude: /node_modules/,
       },
-      {
-        test: /\.(png|jpe?g|gif)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-          },
-        ],
-      },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html',
+      template: './src/index.html',
     }),
     new StylelintPlugin({
       files: 'src/{**/*,*}.css',
     }),
     new ESLintPlugin({
       files: 'src/{**/*,*}.{tsx,ts}',
+    }),
+    new ProvidePlugin({
+      process: 'process/browser.js',
+    }),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('development'),
     }),
   ],
   devServer: {

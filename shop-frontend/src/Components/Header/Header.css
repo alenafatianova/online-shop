@@ -4,3 +4,7 @@
   align-items: center;
   background-color: var(--color-pink);
 }
+
+.logo-image-link {
+  cursor: pointer;
+}

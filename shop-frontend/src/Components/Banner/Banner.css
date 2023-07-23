@@ -1,0 +1,35 @@
+.banner {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  margin: 150px 0;
+}
+
+.banner-image {
+  width: 1228px;
+  height: 535px;
+  display: inline-block;
+}
+
+.banner-text-container {
+  display: grid;
+  font-family: var(--font);
+  color: var(--font-color);
+  justify-items: start;
+  position: absolute;
+  width: 590px;
+  text-align: start;
+  top: 35%;
+  left: 20%;
+}
+
+.banner-text-second-line {
+  padding-top: 50px;
+}
+
+.banner-text {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 26px;
+}

@@ -1,0 +1,39 @@
+.catalogue-section-container {
+  background-color: var(--color-pink);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.mousse-image {
+  height: 350px;
+  width: 250px;
+  margin-top: 80px;
+}
+
+.mist-container {
+  margin-left: 130px;
+}
+
+.mist-image {
+  height: 350px;
+  width: 330px;
+  margin-top: 150px;
+}
+
+.description {
+  font-size: 18px;
+  font-family: var(--font);
+  margin-top: 190px;
+  margin-right: 100px;
+  letter-spacing: 3px;
+  word-wrap: break-word;
+}
+
+.description > h3 {
+  padding: 20px 0;
+}
+
+.button-component {
+  margin-top: 60px;
+}

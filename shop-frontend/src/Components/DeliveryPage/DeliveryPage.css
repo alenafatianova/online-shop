@@ -1,0 +1,78 @@
+.container-delivery-page {
+  background-color: var(--color-white);
+  font-family: var(--font);
+  color: var(--color-font);
+  padding-bottom: 150px;
+}
+
+.header-delivery-page {
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: 3%;
+}
+
+.breadcrumbs-delivery-page {
+  margin-left: 50px;
+  padding: 50px 0;
+}
+
+.delivery-page-headers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px 0;
+}
+
+.delivery-page-table {
+  margin-right: 150px;
+  margin-left: 150px;
+  margin-bottom: 150px;
+}
+
+.mail-point,
+.pick-point,
+.courier-delivery {
+  display: flex;
+  justify-content: space-around;
+  font-family: var(--font);
+  color: var(--color-font);
+  font-size: 20px !important;
+}
+
+.cities-list {
+  max-width: 800px;
+  margin: 0 50px;
+  font-family: var(--font);
+  color: var(--color-font);
+  font-size: 20px;
+}
+
+.breadcrumbs-component {
+  font-family: var(--font);
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.area-header {
+  font-family: var(--font);
+  color: var(--color-font);
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.pickpoint-delivery-header,
+.mailpoint-delivery-header {
+  font-family: var(--font);
+  text-align: center !important;
+  color: var(--color-font) !important;
+  font-size: 18px;
+}
+
+.courier-delivery-header {
+  font-family: var(--font);
+  text-align: center !important;
+  color: var(--color-font) !important;
+  font-size: 18px;
+}

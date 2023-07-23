@@ -16,6 +16,6 @@
     "noEmit": false,
     "jsx": "react"
   },
-  "include": ["src"],
+  "include": ["src", "reportWebVitals.ts", "custom.d.ts"],
   "exclude": ["node_modules", "dist"]
 }

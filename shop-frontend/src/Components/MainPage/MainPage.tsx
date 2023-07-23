@@ -1,30 +1,45 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './MainPage.css'
-import mist from '../../assets/mist.png'
-import mousse from '../../assets/mousse.png'
-import { Button } from '../Button/Button'
+import { InstagramSection } from '../InstagramSection/InstagramSection'
+import { NewProducts } from '../NewProducts/NewProducts'
+import { CatalogueSection } from '../CatalogueSection/CatalogueSection'
+import { UsageVideo } from '../UsageVideo/UsageVideo'
+import { Banner } from '../Banner/Banner'
+import { Products } from '../Products/Products'
+import { getBestsellers, getNewies } from '../../api'
+import { ProductType } from '../types'
 
 export const MainPage: React.FC = () => {
+  const [bestsellers, setBestsellers] = useState<ProductType[]>([])
+  const [newies, setNewies] = useState<ProductType[]>([])
+
+  // get bestsellers:
+  useEffect(() => {
+    ;(async () => {
+      const bestsellers = await getBestsellers()
+      setBestsellers(bestsellers)
+    })()
+  }, [])
+
+  // get new products:
+  useEffect(() => {
+    ;(async () => {
+      const newProducts = await getNewies()
+      setNewies(newProducts)
+    })()
+  }, [])
+
   return (
     <section>
       <h3 className="title">St.Moriz</h3>
       <div className="main-page-container">
-        <div className="image-container">
-          <img src={mist} alt="Мусс" className="mist-image" />
-        </div>
-        <div>
-          <img src={mousse} alt="Масло для загара" className="mousse-image" />
-        </div>
-        <div className="description">
-          <h3>Безопасный загар и идеальный результат</h3>
-          <p>Запатенованная формула с увлажняющими компонентами, </p>
-          <p>позволяющая получать профессиональное качество загара</p>
-          <p>и ухаживать за Вашей кожей</p>
-
-          <div className="button-component">
-            <Button title="Каталог" />
-          </div>
-        </div>
+        <CatalogueSection />
+        <NewProducts />
+        <Products products={newies} shortDescription={'Новая коллекция'} header={'Новинки'} />
+        <Products products={bestsellers} shortDescription={'Популярные товары'} header={'Бестселлеры'} />
+        <Banner />
+        <UsageVideo />
+        <InstagramSection />
       </div>
     </section>
   )
