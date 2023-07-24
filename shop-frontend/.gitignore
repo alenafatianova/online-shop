@@ -1,0 +1,8 @@
+node_modules
+dist
+.DS_Store
+build
+assets
+public
+.env
+package-lock.json
