@@ -5,7 +5,12 @@ import { SpinningLogo } from '../Logo/SpinningLogo'
 import { Menu } from '../Menu/Menu'
 import { NavLink } from 'react-router-dom'
 
-export const Header = () => {
+type HeaderType = {
+  isLogIn: boolean
+  setIsLogIn: (isLogIn: boolean) => void
+}
+
+export const Header: React.FC<HeaderType> = () => {
   return (
     <header className="header">
       <div className="header-container" tabIndex={0}>

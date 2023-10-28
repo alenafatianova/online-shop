@@ -5,7 +5,7 @@
   grid-template-areas: "links logo menu";
   column-gap: 20px;
   align-items: center;
-  background-color: var(--color-pink);
+  background-color: var(--color-white);
 }
 
 .logo-image-link {
