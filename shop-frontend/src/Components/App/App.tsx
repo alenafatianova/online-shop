@@ -12,7 +12,7 @@ const App = () => {
     <React.Fragment>
       <Header />
       <Routes>
-        <Route path="/howto" element={<HowToUsePage />} />
+        <Route path="/how" element={<HowToUsePage />} />
         <Route path={'/'} element={<MainPage />} />
         <Route path={'/delivery'} element={<DeliveryPage />} />
       </Routes>
