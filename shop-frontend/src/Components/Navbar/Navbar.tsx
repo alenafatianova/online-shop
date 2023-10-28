@@ -9,7 +9,7 @@ export const Navbar: React.FC = () => {
         <div className="menu-list">
           <NavLink to={'/catalogue'}>Каталог</NavLink>
           <NavLink to={'/delivery'}>Доставка и оплата</NavLink>
-          <NavLink to={'/howto'}>Как пользоваться</NavLink>
+          <NavLink to={'/how'}>Как пользоваться</NavLink>
         </div>
       </div>
     </React.Fragment>
