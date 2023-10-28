@@ -1,6 +1,9 @@
 .header-container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: auto;
+  /* grid-template-columns: max-content auto max-content; */
+  grid-template-areas: "links logo menu";
+  column-gap: 20px;
   align-items: center;
   background-color: var(--color-pink);
 }

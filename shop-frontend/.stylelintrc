@@ -3,6 +3,8 @@
   "rules": {
     "color-function-notation": "modern",
     "selector-class-pattern": null,
-    "value-keyword-case": null
+    "value-keyword-case": null,
+    "declaration-block-no-redundant-longhand-properties": null,
+    "comment-empty-line-before": null
   }
 }
