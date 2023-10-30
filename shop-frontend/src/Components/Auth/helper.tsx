@@ -1,6 +1,5 @@
 import React from 'react'
 import { Navigate } from 'react-router'
-import { Auth } from './Auth'
 
 type PrivateRoutesType = {
     children: React.ReactNode
