@@ -1,0 +1,37 @@
+.form_auth__container {
+    color: var(--color-font);
+    display: flex;
+    color: var(--color-font);
+    flex-direction: column;
+    align-items: center;
+}
+
+.form_auth__input {
+    display: flex;
+    flex-direction: column;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.form_signup__button_action {
+    border-radius: 7px;
+    text-align: center;
+    margin-top: 50px;
+    background-color: var(--color-tan);
+    width: 250px;
+    height: 50px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.signup_checkbox {
+    border: 1px solid var(--color-font);
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+}
+
+.signup_checkbox:checked {
+    background: var(--color-tan);
+}
+

@@ -14,7 +14,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": false,
-    "jsx": "react"
+    "jsx": "react",
+   
   },
   "include": ["src", "reportWebVitals.ts", "custom.d.ts"],
   "exclude": ["node_modules", "dist"]
