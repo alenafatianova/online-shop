@@ -1,16 +1,39 @@
-.form_auth__container {
+.form_signup__container {
     color: var(--color-font);
     display: flex;
-    color: var(--color-font);
     flex-direction: column;
     align-items: center;
 }
 
-.form_auth__input {
+.form_auth__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form_signup__inputs {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.form_signup__input {
     display: flex;
     flex-direction: column;
     height: 60px;
     margin-bottom: 20px;
+}
+
+
+.input_login, 
+.input_password,
+.input_name,
+.input_surname {
+    outline: 1px solid var(--color-font);
+    opacity: 0.8;
+    height: 40px;
+    width: 350px;
 }
 
 .form_signup__button_action {

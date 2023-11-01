@@ -20,28 +20,28 @@ export const SignupForm = () => {
     }
     return (
       <form className='form_auth__container'>
-        <div className="form_auth__inputs">
-          <div className="form_auth__input">
+        <div className="form_signup__inputs">
+          <div className="form_signup__input">
             <label className="form_auth__label name">Имя</label>
             <input
-              className="input_login"
+              className="input_name"
               type="text"
               value={userName}
               onChange={(e) => setUserName(e.currentTarget.value)}
             />
           </div>
   
-          <div className="form_auth__input">
+          <div className="form_signup__input">
             <label className="form_auth__label surname">Фамилия</label>
             <input
-              className="input_login"
+              className="input_surname"
               type="text"
               value={userSurname}
               onChange={(e) => setUserSurname(e.currentTarget.value)}
             />
           </div>
   
-          <div className="form_auth__input">
+          <div className="form_signup__input">
             <label className="form_auth__label email">Email</label>
             <input
               className="input_login"
@@ -51,7 +51,7 @@ export const SignupForm = () => {
             />
           </div>
   
-          <div className="form_auth__input">
+          <div className="form_signup__input">
             <label className="form_auth__label password">Пароль</label>
             <input
               className="input_password"
