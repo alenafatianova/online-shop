@@ -18,6 +18,12 @@ export const SignupForm = () => {
     const onSalesHandler = () => {
       setIsSalesChecked(true)
     }
+
+    const onSignupHandler = async (e: React.ChangeEvent) => {
+        e.preventDefault()
+       
+    }
+
     return (
       <form className='form_auth__container'>
         <div className="form_signup__inputs">
