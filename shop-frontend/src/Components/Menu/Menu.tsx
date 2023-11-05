@@ -8,12 +8,12 @@ export const Menu = () => {
     <div className="menu_wrapper">
       <div className="icons-container">
         <SearchOutlined className="search-icon" color="red" />
-        <NavLink to='/account' >
+        <NavLink to="/account">
           <UserOutlined className="user-icon" />
         </NavLink>
         <HeartOutlined className="wishlist-icon" />
-          <NavLink to={'/cart'}>
-        <ShoppingOutlined className="cart-icon" />
+        <NavLink to={'/cart'}>
+          <ShoppingOutlined className="cart-icon" />
         </NavLink>
       </div>
     </div>

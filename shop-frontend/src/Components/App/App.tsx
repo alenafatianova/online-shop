@@ -17,7 +17,6 @@ interface IFirebaseApp {
 }
 
 const App: React.FC<IFirebaseApp> = ({ firebaseApp }) => {
-
   const [isLogIn, setIsLogIn] = useState(false)
   const navigate = useNavigate()
 
@@ -28,24 +27,24 @@ const App: React.FC<IFirebaseApp> = ({ firebaseApp }) => {
         <Route path="/how" element={<HowToUsePage />} />
         <Route path={'/'} element={<MainPage />} />
         <Route path={'/delivery'} element={<DeliveryPage />} />
-        <Route 
-          path={'/account'} 
+        <Route
+          path={'/account'}
           element={
             <PrivateRoutes isAuth={isLogIn}>
-                <UserAccount />
+              <UserAccount />
             </PrivateRoutes>
           }
-          />
-          <Route 
-            path={'/cart'}
-            element={
-              <PrivateRoutes isAuth={isLogIn}>
-                <ShoppingCart/>
-              </PrivateRoutes>
-            }
-          />
-        
-        <Route path='/auth' element={<Auth firebaseApp={firebaseApp} />} />
+        />
+        <Route
+          path={'/cart'}
+          element={
+            <PrivateRoutes isAuth={isLogIn}>
+              <ShoppingCart />
+            </PrivateRoutes>
+          }
+        />
+
+        <Route path="/auth" element={<Auth firebaseApp={firebaseApp} />} />
       </Routes>
       <Footer />
     </React.Fragment>

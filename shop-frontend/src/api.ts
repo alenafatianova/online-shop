@@ -4,7 +4,6 @@ import { getStorage } from 'firebase/storage'
 import { ImagesType, ProductType } from './Components/types'
 import 'firebase/auth'
 
-
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
   authDomain: process.env.REACT_APP_AUTH_DOMAIN,
@@ -26,7 +25,6 @@ export const storage = getStorage(app)
 export const initializeAPI = () => {
   initializeApp(firebaseConfig)
 }
-
 
 export const getBestsellers = async (): Promise<ProductType[]> => {
   const querySnapshot = await getDocs(collection(db, 'bestsellers'))
