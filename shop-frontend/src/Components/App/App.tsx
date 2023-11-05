@@ -10,8 +10,13 @@ import { UserAccount } from '../UserAccount/UserAccount'
 import { ShoppingCart } from '../ShoppingCart/ShoppingCart'
 import { Auth } from '../Auth/Auth'
 import { PrivateRoutes } from '../Auth/helper'
+import { FirebaseApp } from 'firebase/app'
 
-const App = () => {
+interface IFirebaseApp {
+  firebaseApp: FirebaseApp
+}
+
+const App: React.FC<IFirebaseApp> = ({ firebaseApp }) => {
 
   const [isLogIn, setIsLogIn] = useState(false)
   const navigate = useNavigate()
@@ -40,7 +45,7 @@ const App = () => {
             }
           />
         
-        <Route path='/auth' element={<Auth />} />
+        <Route path='/auth' element={<Auth firebaseApp={firebaseApp} />} />
       </Routes>
       <Footer />
     </React.Fragment>

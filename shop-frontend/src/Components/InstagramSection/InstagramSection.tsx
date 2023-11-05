@@ -14,7 +14,6 @@ export const InstagramSection = () => {
   const handleData = async () => {
     const instagramUsersPhotos = await getInstagramPhotos()
     setInstagramUsers(instagramUsersPhotos)
-    console.log(instagramUsersPhotos)
   }
 
   useEffect(() => {

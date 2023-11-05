@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 import './SignupForm.css'
+import { Auth, createUserWithEmailAndPassword } from 'firebase/auth'
 
+interface SignupFormType {
+  auth: Auth
+}
 
-export const SignupForm = () => {
+export const SignupForm: React.FC<SignupFormType> = ({ auth }) => {
     const [newEmail, setNewEmail] = useState('')
     const [newPassword, setNewPassword] = useState('')
     const [userName, setUserName] = useState('')
@@ -19,8 +23,9 @@ export const SignupForm = () => {
       setIsSalesChecked(true)
     }
 
-    const onSignupHandler = async (e: React.ChangeEvent) => {
+    const onSignupHandler = async (e: any) => {
         e.preventDefault()
+        createUserWithEmailAndPassword(auth, newEmail, newPassword)
        
     }
 
@@ -83,7 +88,7 @@ export const SignupForm = () => {
             </div>
           </div>
         </div>
-        <button className="form_signup__button_action">Зарегистрироваться</button>
+        <button className="form_signup__button_action" onClick={onSignupHandler}>Зарегистрироваться</button>
       </form>
     )
 }

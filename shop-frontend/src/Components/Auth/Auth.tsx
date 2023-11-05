@@ -1,20 +1,60 @@
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './Auth.css'
 import { SignupForm } from './SignupForm/SignupForm'
-import { AuthForm } from './AuthForm/AuthForm'
+import { LoginForm } from './LoginForm/LoginForm'
+import { User, UserCredential, getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth'
+import { FirebaseApp } from 'firebase/app'
 
-export const Auth = () => {
+interface IFirebaseApp {
+  firebaseApp: FirebaseApp
+}
+
+interface IAuthContextType {
+  isAuth: boolean | null
+  user?: User | null
+  loginWithEmailAndPassword: (email: string, password: string) => Promise<UserCredential>
+  logout: () => void
+}
+
+export const Auth: React.FC<IFirebaseApp> = ({ firebaseApp }) => {
  
     const [state, setState] = useState<'login' | 'signup'>('login')
+    const [isAuth, setIsAuth] = useState<IAuthContextType['isAuth']>(null)
+    const [user, setUser] = useState<User | null>(null)
+    const [auth] = useState(getAuth(firebaseApp))
+    const logout = () => signOut(auth)
 
-    const onLoginBtnChange = (e: any) => {
-        e.preventDefault()
-        setState('login')
-    }
+    // const AuthContext = React.createContext({
+    //   isAuth: null,
+    //   loginWithEmailAndPassword: () => Promise.reject({}),
+    //   logout: () => undefined
+    // })
 
-  const onSignupBtnChange = (e: any) => {
+    useEffect(() => {
+      auth.onAuthStateChanged((user) => {
+        if (user) {
+          setUser(user)
+          setIsAuth(true)
+        } else {
+          setUser(null)
+          setIsAuth(false)
+        }
+      })
+    }, [auth])
+
+    // const useAuthContext = () => {
+    //   return useContext(AuthContext)
+    // }
+
+
+  const onSignupBtnHandler = (e: any) => {
     e.preventDefault()
     setState('signup')
+  }
+
+  const onLoginBtnHandler = (e: any) => {
+    e.preventDefault()
+    setState('login')
   }
 
   return (
@@ -27,14 +67,17 @@ export const Auth = () => {
         <div className={(state === 'signup' ) ? 'auth__form_signup' : "auth__form"}>
           <h2 className='auth_form__h2'>Авторизация</h2>
           <div className="form_auth__buttons">
-            <button className="form_auth__button"  onClick={onSignupBtnChange}>
+            <button className="form_auth__button"  onClick={onSignupBtnHandler}>
                 Регистрация
             </button>
-            <button className="form_auth__button"  onClick={onLoginBtnChange}>
+            <button className="form_auth__button"  onClick={onLoginBtnHandler}>
               Вход
             </button>
           </div>
-          {state === 'login' ? <AuthForm /> : <SignupForm />}
+          {state === 'login' ? 
+          <LoginForm setButtonState={() => setState('login')} buttonState='login' auth={auth} /> 
+            : 
+          <SignupForm auth={auth} />}
         </div>
       </div>
     </React.Fragment>
