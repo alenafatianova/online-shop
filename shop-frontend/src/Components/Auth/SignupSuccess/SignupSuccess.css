@@ -1,0 +1,15 @@
+
+.signup_success__wrapper {
+    display: flex;
+    align-items: center;
+    width: 500px;
+    height: 600px;
+    background-color: var(--color-white);
+    justify-content: center;
+    flex-direction: column;
+}
+
+.signup_success__mark {
+    font-size: 30px;
+    color: #7fe17f;
+}

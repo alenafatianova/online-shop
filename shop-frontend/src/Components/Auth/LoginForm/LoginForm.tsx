@@ -9,7 +9,7 @@ interface LoginFormType {
   auth: Auth
 }
 
-export const LoginForm: React.FC<LoginFormType> = ({ setButtonState, proccessLogin, auth }) => {
+export const LoginForm: React.FC<LoginFormType> = ({ setButtonState, auth }) => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 

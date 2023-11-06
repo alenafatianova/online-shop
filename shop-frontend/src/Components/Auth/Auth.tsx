@@ -4,6 +4,7 @@ import { SignupForm } from './SignupForm/SignupForm'
 import { LoginForm } from './LoginForm/LoginForm'
 import { User, UserCredential, getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth'
 import { FirebaseApp } from 'firebase/app'
+import { SignupSuccess } from './SignupSuccess/SignupSuccess'
 
 interface IFirebaseApp {
   firebaseApp: FirebaseApp
@@ -20,6 +21,7 @@ export const Auth: React.FC<IFirebaseApp> = ({ firebaseApp }) => {
   const [state, setState] = useState<'login' | 'signup'>('login')
   const [isAuth, setIsAuth] = useState<IAuthContextType['isAuth']>(null)
   const [user, setUser] = useState<User | null>(null)
+  const [isRegistered, setIsRegistered] = useState(false)
   const [auth] = useState(getAuth(firebaseApp))
   const logout = () => signOut(auth)
 
@@ -45,12 +47,12 @@ export const Auth: React.FC<IFirebaseApp> = ({ firebaseApp }) => {
   //   return useContext(AuthContext)
   // }
 
-  const onSignupBtnHandler = (e: any) => {
+  const onSignupBtnHandler = (e: React.MouseEvent) => {
     e.preventDefault()
     setState('signup')
   }
 
-  const onLoginBtnHandler = (e: any) => {
+  const onLoginBtnHandler = (e: React.MouseEvent) => {
     e.preventDefault()
     setState('login')
   }
@@ -62,22 +64,27 @@ export const Auth: React.FC<IFirebaseApp> = ({ firebaseApp }) => {
           <img className="background__image" src={require('../../assets/auth_background.png')} alt="Background image" />
         </div>
 
+       {isRegistered ? 
+       <SignupSuccess />
+       : (
         <div className={state === 'signup' ? 'auth__form_signup' : 'auth__form'}>
-          <h2 className="auth_form__h2">Авторизация</h2>
-          <div className="form_auth__buttons">
-            <button className="form_auth__button" onClick={onSignupBtnHandler}>
-              Регистрация
-            </button>
-            <button className="form_auth__button" onClick={onLoginBtnHandler}>
-              Вход
-            </button>
-          </div>
-          {state === 'login' ? (
-            <LoginForm setButtonState={() => setState('login')} buttonState="login" auth={auth} />
-          ) : (
-            <SignupForm auth={auth} />
-          )}
+        <h2 className="auth_form__h2">Авторизация</h2>
+        <div className="form_auth__buttons">
+          <button className="form_auth__button" onClick={onSignupBtnHandler}>
+            Регистрация
+          </button>
+          <button className="form_auth__button" onClick={onLoginBtnHandler}>
+            Вход
+          </button>
         </div>
+        {state === 'login' ? (
+          <LoginForm setButtonState={() => setState('login')} buttonState="login" auth={auth} />
+        ) : (
+          <SignupForm setIsRegistered={setIsRegistered} auth={auth} />
+        )}
+      </div>
+      )}
+        
       </div>
     </React.Fragment>
   )

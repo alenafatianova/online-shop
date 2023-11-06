@@ -1,35 +1,49 @@
 import React, { useState } from 'react'
 import './SignupForm.css'
 import { Auth, createUserWithEmailAndPassword } from 'firebase/auth'
+import { validateEmail } from '../helper'
 
 interface SignupFormType {
   auth: Auth
+  setIsRegistered: (isRegistered: boolean) => void
 }
 
-export const SignupForm: React.FC<SignupFormType> = ({ auth }) => {
+export const SignupForm: React.FC<SignupFormType> = ({ auth, setIsRegistered}) => {
   const [newEmail, setNewEmail] = useState('')
   const [newPassword, setNewPassword] = useState('')
   const [userName, setUserName] = useState('')
   const [userSurname, setUserSurname] = useState('')
+ 
 
   const [isAgreementChecked, setIsAgreementChecked] = useState(false)
   const [isSalesChecked, setIsSalesChecked] = useState(false)
 
+  const newEmailHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = e.currentTarget.value
+    setNewEmail(newValue)
+  }
+
+  const newPasswordHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = e.currentTarget.value
+    setNewPassword(newValue)
+  }
+
   const onAgreementHandler = () => {
-    setIsAgreementChecked(true)
+    setIsAgreementChecked(!isAgreementChecked)
   }
 
   const onSalesHandler = () => {
-    setIsSalesChecked(true)
+    setIsSalesChecked(!isSalesChecked)
   }
 
-  const onSignupHandler = async (e: any) => {
+  const onSignupHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
     createUserWithEmailAndPassword(auth, newEmail, newPassword)
+    setIsRegistered(true)
   }
 
   return (
-    <form className="form_auth__container">
+    <form className="form_auth__container" >
       <div className="form_signup__inputs">
         <div className="form_signup__input">
           <label className="form_auth__label name">Имя</label>
@@ -45,7 +59,7 @@ export const SignupForm: React.FC<SignupFormType> = ({ auth }) => {
           <label className="form_auth__label surname">Фамилия</label>
           <input
             className="input_surname"
-            type="text"
+            type='text'
             value={userSurname}
             onChange={(e) => setUserSurname(e.currentTarget.value)}
           />
@@ -55,9 +69,10 @@ export const SignupForm: React.FC<SignupFormType> = ({ auth }) => {
           <label className="form_auth__label email">Email</label>
           <input
             className="input_login"
-            type="text"
+            type="email"
             value={newEmail}
-            onChange={(e) => setNewEmail(e.currentTarget.value)}
+            onChange={newEmailHandler}
+            required
           />
         </div>
 
@@ -65,9 +80,11 @@ export const SignupForm: React.FC<SignupFormType> = ({ auth }) => {
           <label className="form_auth__label password">Пароль</label>
           <input
             className="input_password"
-            type="text"
+            type="password"
             value={newPassword}
-            onChange={(e) => setNewPassword(e.currentTarget.value)}
+            onChange={newPasswordHandler}
+            minLength={9}
+            required
           />
         </div>
 
