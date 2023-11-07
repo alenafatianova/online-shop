@@ -9,7 +9,7 @@ export const SignupSuccess = () => {
     <div className='signup_success__wrapper'>
        <div className='signup_success__mark'> <CheckCircleTwoTone twoToneColor="#52c41a"/></div>
         <p className='signup_success__text'>Вы успешно зарегистрированы! </p>
-        <p>Перейти на <NavLink to='/'><link rel="stylesheet" href="" />главную страницу</NavLink></p>
+        <p className='signup_success__navlink'>Перейти на <NavLink to='/'>главную страницу</NavLink></p>
     </div>
   )
 }
