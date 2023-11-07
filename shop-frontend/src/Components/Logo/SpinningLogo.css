@@ -1,15 +1,16 @@
 .logo-spinning {
-  max-height: 130px;
+  grid-area: logo;
+  /* max-height: 130px; */
 }
 
 .spinning-item {
-  animation: wheel 20s infinite linear;
+  /* animation: wheel 20s infinite linear;
   transform-box: fill-box;
-  transform-origin: center;
+  transform-origin: center; */
   width: 100px;
 }
 
-@keyframes wheel {
+/* @keyframes wheel {
   0% {
     transform: rotateZ(0deg);
   }
@@ -17,7 +18,7 @@
   100% {
     transform: rotateZ(360deg);
   }
-}
+} */
 
 .logo-image {
   margin: 35px 0;

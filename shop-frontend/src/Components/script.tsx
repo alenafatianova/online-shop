@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './App/App'
 import './common.css'
 import reportWebVitals from '../../reportWebVitals'
-import { initializeAPI } from '../api'
+import { app, initializeAPI } from '../api'
 
 initializeAPI()
 
@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <App firebaseApp={app} />
     </BrowserRouter>
   </React.StrictMode>
 )

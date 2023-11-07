@@ -1,0 +1,30 @@
+
+.signup_success__wrapper {
+    display: flex;
+    align-items: center;
+    width: 670px;
+    height: 715px;
+    background-color: var(--color-white);
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    box-shadow: #6363634d 0 2px 8px 0;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.signup_success__mark {
+    font-size: 30px;
+    color: #7fe17f;
+    margin: 50x 0;
+}
+
+.signup_success__text {
+    font-size: 24px;
+    margin: 30px 0;
+}
+
+.signup_success__navlink a {
+    border-bottom: 1px solid grey;
+    cursor: pointer;
+}
