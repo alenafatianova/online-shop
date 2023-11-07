@@ -13,10 +13,10 @@ export const LoginForm: React.FC<LoginFormType> = ({ setButtonState, auth }) => 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  const onLoginBtnHandler = async (e: any) => {
+  const onLoginBtnHandler = (e: any) => {
     e.preventDefault()
     setButtonState('login')
-    await signInWithEmailAndPassword(auth, email, password)
+    signInWithEmailAndPassword(auth, email, password)
   }
 
   return (

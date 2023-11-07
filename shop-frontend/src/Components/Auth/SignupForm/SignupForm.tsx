@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import './SignupForm.css'
 import { Auth, createUserWithEmailAndPassword } from 'firebase/auth'
 import { validateEmail } from '../helper'
+import { Navigate, useNavigate } from 'react-router-dom'
+import { SignupSuccess } from '../SignupSuccess/SignupSuccess'
 
 interface SignupFormType {
   auth: Auth
@@ -13,20 +15,10 @@ export const SignupForm: React.FC<SignupFormType> = ({ auth, setIsRegistered}) =
   const [newPassword, setNewPassword] = useState('')
   const [userName, setUserName] = useState('')
   const [userSurname, setUserSurname] = useState('')
+  const navigate = useNavigate()
  
-
   const [isAgreementChecked, setIsAgreementChecked] = useState(false)
   const [isSalesChecked, setIsSalesChecked] = useState(false)
-
-  const newEmailHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newValue = e.currentTarget.value
-    setNewEmail(newValue)
-  }
-
-  const newPasswordHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newValue = e.currentTarget.value
-    setNewPassword(newValue)
-  }
 
   const onAgreementHandler = () => {
     setIsAgreementChecked(!isAgreementChecked)
@@ -36,14 +28,15 @@ export const SignupForm: React.FC<SignupFormType> = ({ auth, setIsRegistered}) =
     setIsSalesChecked(!isSalesChecked)
   }
 
-  const onSignupHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault()
+  const onSignupHandler = (event: React.FormEvent<HTMLFormElement>) => {
+    console.log('event: ', event)
+    event.preventDefault()
     createUserWithEmailAndPassword(auth, newEmail, newPassword)
     setIsRegistered(true)
   }
 
   return (
-    <form className="form_auth__container" >
+    <form className="form_auth__container" name='signup_form' onSubmit={onSignupHandler}>
       <div className="form_signup__inputs">
         <div className="form_signup__input">
           <label className="form_auth__label name">Имя</label>
@@ -71,7 +64,7 @@ export const SignupForm: React.FC<SignupFormType> = ({ auth, setIsRegistered}) =
             className="input_login"
             type="email"
             value={newEmail}
-            onChange={newEmailHandler}
+            onChange={e => setNewEmail(e.currentTarget.value)}
             required
           />
         </div>
@@ -82,7 +75,7 @@ export const SignupForm: React.FC<SignupFormType> = ({ auth, setIsRegistered}) =
             className="input_password"
             type="password"
             value={newPassword}
-            onChange={newPasswordHandler}
+            onChange={e => setNewPassword(e.currentTarget.value)}
             minLength={9}
             required
           />
@@ -109,7 +102,7 @@ export const SignupForm: React.FC<SignupFormType> = ({ auth, setIsRegistered}) =
           </div>
         </div>
       </div>
-      <button className="form_signup__button_action" onClick={onSignupHandler}>
+      <button className="form_signup__button_action">
         Зарегистрироваться
       </button>
     </form>

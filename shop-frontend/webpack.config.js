@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin')
 const StylelintPlugin = require('stylelint-webpack-plugin')
 const { ProvidePlugin, DefinePlugin } = require('webpack')
-const dotenv = require('dotenv-webpack')
+const dotenv = require('dotenv')
 
 module.exports = () => {
   const env = dotenv.config().parsed

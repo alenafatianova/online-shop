@@ -18,7 +18,6 @@ interface IFirebaseApp {
 
 const App: React.FC<IFirebaseApp> = ({ firebaseApp }) => {
   const [isLogIn, setIsLogIn] = useState(false)
-  const navigate = useNavigate()
 
   return (
     <React.Fragment>

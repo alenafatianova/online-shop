@@ -65,7 +65,7 @@ export const Auth: React.FC<IFirebaseApp> = ({ firebaseApp }) => {
         </div>
 
        {isRegistered ? 
-       <SignupSuccess />
+        <SignupSuccess />
        : (
         <div className={state === 'signup' ? 'auth__form_signup' : 'auth__form'}>
         <h2 className="auth_form__h2">Авторизация</h2>
