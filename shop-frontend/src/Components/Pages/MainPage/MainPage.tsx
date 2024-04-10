@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './MainPage.css' 
+import './MainPage.css'
 import { getBestsellers, getNewies } from '../../../api'
 import { ProductType } from '../../types'
 import { CatalogueSection } from './CatalogueSection/CatalogueSection'
