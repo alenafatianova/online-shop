@@ -4,6 +4,7 @@ import { Navbar } from '../Navbar/Navbar'
 import { SpinningLogo } from '../Logo/SpinningLogo'
 import { Menu } from '../Menu/Menu'
 import { NavLink } from 'react-router-dom'
+import { StaticLogo } from '../Logo/StaticLogo'
 
 type HeaderType = {
   isLogIn: boolean
@@ -16,7 +17,7 @@ export const Header: React.FC<HeaderType> = () => {
       <div className="header-container" tabIndex={0}>
         <Navbar />
         <NavLink to={'/'} className={'logo-image-link'}>
-          <SpinningLogo />
+          <StaticLogo />
         </NavLink>
         <Menu />
       </div>

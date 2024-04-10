@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useCallback } from 'react'
 import './InstagramSection.css'
-import { Button } from '../Button/Button'
-import { ImagesType } from '../types'
-import { getInstagramPhotos } from '../../api'
+import { Button } from '../../../Button/Button'
+import { ImagesType } from '../../../types'
+import { getInstagramPhotos } from '../../../../api'
 
 export const InstagramSection = () => {
   const [instagramUsers, setInstagramUsers] = useState<ImagesType[]>([])
