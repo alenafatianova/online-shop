@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './CataloguePage.css'
 import banner from '../../../assets/Banner_texture.png'
 import { Breadcrumb } from 'antd'
@@ -6,6 +6,11 @@ import { NavLink } from 'react-router-dom'
 import { cataloguePageProducts } from './utils'
 
 export const CataloguePage = () => {
+
+    const [filteredProducts, setFilteredProducts] = useState(cataloguePageProducts)
+    const [selectedTag, setSelectedTag] = useState('')
+
+
   const breadcrumbsItems = [
     {
       title: <NavLink to="/">Главная</NavLink>,
@@ -14,6 +19,15 @@ export const CataloguePage = () => {
       title: <NavLink to="/catalogue">Каталог</NavLink>,
     },
   ]
+
+    
+  const productsFilterHandler = (tag: string) => {
+    setSelectedTag(tag)
+    const productsByTag = cataloguePageProducts.filter((product) => product.tag?.includes(tag))
+    setFilteredProducts(productsByTag) 
+  }
+
+  
 
   return (
     <div className="catalogue_wrapper">
@@ -26,16 +40,16 @@ export const CataloguePage = () => {
       <Breadcrumb className="breadcrumbs" items={breadcrumbsItems} />
       <h1 className="catalogue-header">Каталог</h1>
       <div className="catalogue_filter-buttons">
-        <button className="">Все</button>
-        <button className="">Муссы</button>
-        <button className="">Лосьоны</button>
-        <button className="">Спреи</button>
-        <button className="">Аксессуары</button>
-        <button className="">Косметика</button>
+        <button onClick={() => productsFilterHandler('')}>Все</button>
+        <button onClick={() => productsFilterHandler('mousse')}>Муссы</button>
+        <button onClick={() => productsFilterHandler('lotion')}>Лосьоны</button>
+        <button onClick={() => productsFilterHandler('spray')}>Спреи</button>
+        <button onClick={() => productsFilterHandler('accessories')}>Аксессуары</button>
+        <button onClick={() => productsFilterHandler('cosmetics')}>Косметика</button>
       </div>
      
         <div className="catalogue_products-rows">
-          {cataloguePageProducts.map((product) => (
+          {filteredProducts.map((product) => (
             <div key={product.id} className='products-rows'>
               <img src={product.image} alt="Продукт для загара" />
               <p className="product_name">{product.title}</p>

@@ -60,6 +60,11 @@
   padding-right: 13px;
   text-align: center;
   border: 1px solid #d4d4d4;
+  cursor: pointer;
+}
+
+.catalogue_filter-buttons button:hover {
+  background-color: #FFDBB8;
 }
 
 .catalogue_products-rows {

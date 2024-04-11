@@ -1,12 +1,18 @@
 import { ProductType } from '../../types'
 
-export const cataloguePageProducts: ProductType[] = [
+interface ProductsCatalogue extends ProductType  {
+    tag?: string
+}
+
+
+export const cataloguePageProducts: ProductsCatalogue[] = [
   {
     id: '1',
     title: 'Мусс-автозагар, оттенок Medium',
     image: require('../../../assets/catalogue/mousse1.png'),
     volume: '200 ml',
     price: '870 руб.',
+    tag: 'mousse'
   },
   {
     id: '2',
@@ -14,6 +20,7 @@ export const cataloguePageProducts: ProductType[] = [
     image: require('../../../assets/catalogue/mousse-dark.png'),
     volume: '200 ml',
     price: '870 руб.',
+    tag: 'mousse'
   },
   {
     id: '3',
@@ -21,6 +28,7 @@ export const cataloguePageProducts: ProductType[] = [
     image: require('../../../assets/catalogue/mousse-express.png'),
     volume: '200 ml',
     price: '870 руб.',
+    tag: 'mousse'
   },
   {
     id: '4',
@@ -28,6 +36,7 @@ export const cataloguePageProducts: ProductType[] = [
     image: require('../../../assets/catalogue/mousse-removal.png'),
     volume: '200 ml',
     price: '1149 руб.',
+    tag: 'mousse'
   },
 
 
@@ -38,6 +47,7 @@ export const cataloguePageProducts: ProductType[] = [
     image: require('../../../assets/catalogue/mousse-5in1-medium.png'),
     volume: '200 ml',
     price: '990 руб.',
+    tag: 'mousse'
   },
   {
     id: '6',
@@ -45,6 +55,7 @@ export const cataloguePageProducts: ProductType[] = [
     image: require('../../../assets/catalogue/mousse-5in1-medium.png'),
     volume: '200 ml',
     price: '990 руб.',
+    tag: 'mousse'
   },
   {
     id: '7',
@@ -52,6 +63,7 @@ export const cataloguePageProducts: ProductType[] = [
     image: require('../../../assets/catalogue/lotion-gradual-tan.png'),
     volume: '275 ml',
     price: '790 руб.',
+    tag: 'lotion'
   },
   {
     id: '8',
@@ -59,9 +71,8 @@ export const cataloguePageProducts: ProductType[] = [
     image: require('../../../assets/catalogue/glowing-lotion.png'),
     volume: '200 ml',
     price: '790 руб.',
+    tag: 'lotion'
   },
-
-
 
   {
     id: '9',
@@ -69,6 +80,7 @@ export const cataloguePageProducts: ProductType[] = [
     image: require('../../../assets/catalogue/lotion-tan-extend.png'),
     volume: '200 ml',
     price: '790 руб.',
+    tag: 'lotion'
   },
   {
     id: '10',
@@ -76,6 +88,7 @@ export const cataloguePageProducts: ProductType[] = [
     image: require('../../../assets/catalogue/lotion-medium.png'),
     volume: '250 ml',
     price: '870 руб.',
+    tag: 'lotion'
   },
   {
     id: '11',
@@ -83,6 +96,7 @@ export const cataloguePageProducts: ProductType[] = [
     image: require('../../../assets/catalogue/lotion-dark.png'),
     volume: '250 ml',
     price: '870 руб.',
+    tag: 'lotion'
   },
   {
     id: '12',
@@ -90,16 +104,15 @@ export const cataloguePageProducts: ProductType[] = [
     image: require('../../../assets/catalogue/serum.png'),
     volume: '15 ml',
     price: '1290 руб.',
+    tag: 'cosmetics'
   }, 
-  
-  
-  
   {
     id: '13',
     title: 'Сухое масло-автобронзант',
     image: require('../../../assets/catalogue/dry-oil.png'),
     volume: '100 ml',
     price: '870 руб.',
+    tag: 'cosmetics'
   },
   {
     id: '14',
@@ -107,6 +120,7 @@ export const cataloguePageProducts: ProductType[] = [
     image: require('../../../assets/catalogue/mittens.png'),
     volume: '',
     price: '390 руб.',
+    tag: 'accessories'
   },
   {
     id: '15',
@@ -114,6 +128,7 @@ export const cataloguePageProducts: ProductType[] = [
     image: require('../../../assets/catalogue/spray-medium.png'),
     volume: '150 ml',
     price: '870 руб.',
+    tag: 'spray'
   },
   {
     id: '16',
@@ -121,6 +136,7 @@ export const cataloguePageProducts: ProductType[] = [
     image: require('../../../assets/catalogue/spray-dark.png'),
     volume: '150 ml',
     price: '870 руб.',
+    tag: 'spray'
   },
   {
     id: '17',
@@ -128,5 +144,6 @@ export const cataloguePageProducts: ProductType[] = [
     image: require('../../../assets/catalogue/powder.png'),
     volume: '15 гр',
     price: '790 руб.',
+    tag: 'cosmetics'
   },
 ]
