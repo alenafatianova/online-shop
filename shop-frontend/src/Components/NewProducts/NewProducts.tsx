@@ -1,6 +1,6 @@
 import React from 'react'
 import './NewProducts.css'
-import { ProductCarousel } from '../ProductCarousel/ProductCarousel'
+import { ProductCarousel } from '../Pages/MainPage/ProductCarousel/ProductCarousel'
 
 export const NewProducts: React.FC = () => {
   return (

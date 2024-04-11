@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import './MainPage.css'
-import { InstagramSection } from '../InstagramSection/InstagramSection'
-import { NewProducts } from '../NewProducts/NewProducts'
-import { CatalogueSection } from '../CatalogueSection/CatalogueSection'
-import { UsageVideo } from '../UsageVideo/UsageVideo'
-import { Banner } from '../Banner/Banner'
-import { Products } from '../Products/Products'
-import { getBestsellers, getNewies } from '../../api'
-import { ProductType } from '../types'
+import { getBestsellers, getNewies } from '../../../api'
+import { ProductType } from '../../types'
+import { CatalogueSection } from './CatalogueSection/CatalogueSection'
+import { NewProducts } from '../../NewProducts/NewProducts'
+import { Products } from './Products/Products'
+import { Banner } from './Banner/Banner'
+import { InstagramSection } from './InstagramSection/InstagramSection'
+import { UsageVideo } from './UsageVideo/UsageVideo'
 
 export const MainPage: React.FC = () => {
   const [bestsellers, setBestsellers] = useState<ProductType[]>([])

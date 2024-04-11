@@ -10,13 +10,13 @@ interface SignupFormType {
   setIsRegistered: (isRegistered: boolean) => void
 }
 
-export const SignupForm: React.FC<SignupFormType> = ({ auth, setIsRegistered}) => {
+export const SignupForm: React.FC<SignupFormType> = ({ auth, setIsRegistered }) => {
   const [newEmail, setNewEmail] = useState('')
   const [newPassword, setNewPassword] = useState('')
   const [userName, setUserName] = useState('')
   const [userSurname, setUserSurname] = useState('')
   const navigate = useNavigate()
- 
+
   const [isAgreementChecked, setIsAgreementChecked] = useState(false)
   const [isSalesChecked, setIsSalesChecked] = useState(false)
 
@@ -36,7 +36,7 @@ export const SignupForm: React.FC<SignupFormType> = ({ auth, setIsRegistered}) =
   }
 
   return (
-    <form className="form_auth__container" name='signup_form' onSubmit={onSignupHandler}>
+    <form className="form_auth__container" name="signup_form" onSubmit={onSignupHandler}>
       <div className="form_signup__inputs">
         <div className="form_signup__input">
           <label className="form_auth__label name">Имя</label>
@@ -52,7 +52,7 @@ export const SignupForm: React.FC<SignupFormType> = ({ auth, setIsRegistered}) =
           <label className="form_auth__label surname">Фамилия</label>
           <input
             className="input_surname"
-            type='text'
+            type="text"
             value={userSurname}
             onChange={(e) => setUserSurname(e.currentTarget.value)}
           />
@@ -64,7 +64,7 @@ export const SignupForm: React.FC<SignupFormType> = ({ auth, setIsRegistered}) =
             className="input_login"
             type="email"
             value={newEmail}
-            onChange={e => setNewEmail(e.currentTarget.value)}
+            onChange={(e) => setNewEmail(e.currentTarget.value)}
             required
           />
         </div>
@@ -75,7 +75,7 @@ export const SignupForm: React.FC<SignupFormType> = ({ auth, setIsRegistered}) =
             className="input_password"
             type="password"
             value={newPassword}
-            onChange={e => setNewPassword(e.currentTarget.value)}
+            onChange={(e) => setNewPassword(e.currentTarget.value)}
             minLength={9}
             required
           />
@@ -102,9 +102,7 @@ export const SignupForm: React.FC<SignupFormType> = ({ auth, setIsRegistered}) =
           </div>
         </div>
       </div>
-      <button className="form_signup__button_action">
-        Зарегистрироваться
-      </button>
+      <button className="form_signup__button_action">Зарегистрироваться</button>
     </form>
   )
 }

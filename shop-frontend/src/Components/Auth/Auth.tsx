@@ -64,27 +64,26 @@ export const Auth: React.FC<IFirebaseApp> = ({ firebaseApp }) => {
           <img className="background__image" src={require('../../assets/auth_background.png')} alt="Background image" />
         </div>
 
-       {isRegistered ? 
-        <SignupSuccess />
-       : (
-        <div className={state === 'signup' ? 'auth__form_signup' : 'auth__form'}>
-        <h2 className="auth_form__h2">Авторизация</h2>
-        <div className="form_auth__buttons">
-          <button className="form_auth__button" onClick={onSignupBtnHandler}>
-            Регистрация
-          </button>
-          <button className="form_auth__button" onClick={onLoginBtnHandler}>
-            Вход
-          </button>
-        </div>
-        {state === 'login' ? (
-          <LoginForm setButtonState={() => setState('login')} buttonState="login" auth={auth} />
+        {isRegistered ? (
+          <SignupSuccess />
         ) : (
-          <SignupForm setIsRegistered={setIsRegistered} auth={auth} />
+          <div className={state === 'signup' ? 'auth__form_signup' : 'auth__form'}>
+            <h2 className="auth_form__h2">Авторизация</h2>
+            <div className="form_auth__buttons">
+              <button className="form_auth__button" onClick={onSignupBtnHandler}>
+                Регистрация
+              </button>
+              <button className="form_auth__button" onClick={onLoginBtnHandler}>
+                Вход
+              </button>
+            </div>
+            {state === 'login' ? (
+              <LoginForm setButtonState={() => setState('login')} buttonState="login" auth={auth} />
+            ) : (
+              <SignupForm setIsRegistered={setIsRegistered} auth={auth} />
+            )}
+          </div>
         )}
-      </div>
-      )}
-        
       </div>
     </React.Fragment>
   )

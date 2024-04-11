@@ -1,6 +1,6 @@
 import React from 'react'
 import './Products.css'
-import { ProductType } from '../types'
+import { ProductType } from '../../../types'
 
 interface ProductsType {
   products: ProductType[]

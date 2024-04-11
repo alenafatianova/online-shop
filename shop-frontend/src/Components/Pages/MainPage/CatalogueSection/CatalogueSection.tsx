@@ -1,6 +1,6 @@
 import React from 'react'
 import './CatalogueSection.css'
-import { Button } from '../Button/Button'
+import { Button } from '../../../Button/Button'
 
 export const CatalogueSection = () => {
   return (
