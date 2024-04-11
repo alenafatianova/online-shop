@@ -6,10 +6,8 @@ import { NavLink } from 'react-router-dom'
 import { cataloguePageProducts } from './utils'
 
 export const CataloguePage = () => {
-
-    const [filteredProducts, setFilteredProducts] = useState(cataloguePageProducts)
-    const [selectedTag, setSelectedTag] = useState('')
-
+  const [filteredProducts, setFilteredProducts] = useState(cataloguePageProducts)
+  const [selectedTag, setSelectedTag] = useState('')
 
   const breadcrumbsItems = [
     {
@@ -20,14 +18,11 @@ export const CataloguePage = () => {
     },
   ]
 
-    
   const productsFilterHandler = (tag: string) => {
     setSelectedTag(tag)
     const productsByTag = cataloguePageProducts.filter((product) => product.tag?.includes(tag))
-    setFilteredProducts(productsByTag) 
+    setFilteredProducts(productsByTag)
   }
-
-  
 
   return (
     <div className="catalogue_wrapper">
@@ -47,18 +42,17 @@ export const CataloguePage = () => {
         <button onClick={() => productsFilterHandler('accessories')}>Аксессуары</button>
         <button onClick={() => productsFilterHandler('cosmetics')}>Косметика</button>
       </div>
-     
-        <div className="catalogue_products-rows">
-          {filteredProducts.map((product) => (
-            <div key={product.id} className='products-rows'>
-              <img src={product.image} alt="Продукт для загара" />
-              <p className="product_name">{product.title}</p>
-              <p className="product_volume">{product.volume}</p>
-              <p className="product_price">{product.price}</p>
-            </div>
-          ))}
-        </div>
-  
+
+      <div className="catalogue_products-rows">
+        {filteredProducts.map((product) => (
+          <div key={product.id} className="products-rows">
+            <img src={product.image} alt="Продукт для загара" />
+            <p className="product_name">{product.title}</p>
+            <p className="product_volume">{product.volume}</p>
+            <p className="product_price">{product.price}</p>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

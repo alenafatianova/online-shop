@@ -64,36 +64,36 @@
 }
 
 .catalogue_filter-buttons button:hover {
-  background-color: #FFDBB8;
+  background-color: #ffdbb8;
 }
 
 .catalogue_products-rows {
-    color: #2E2C2C;
-    padding: 50px 0;
-    margin-top: 80px;
-    grid-row-gap: 80px;
-    grid-column-gap: 20px;
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-areas: "product1 product2 product3 product4";
-    justify-items: center;
-    background-color: #ffff;
+  color: #2e2c2c;
+  padding: 50px 0;
+  margin-top: 80px;
+  grid-row-gap: 80px;
+  grid-column-gap: 20px;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas: "product1 product2 product3 product4";
+  justify-items: center;
+  background-color: #ffff;
 }
 
 .products-rows {
-    text-align: center;
+  text-align: center;
 }
 
 .product_price {
-    margin-top: 30px;
-    text-transform: uppercase;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 30px;
+  text-transform: uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .product_volume {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .product_name {
-    margin-top: 20px;
+  margin-top: 20px;
 }
