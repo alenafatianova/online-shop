@@ -1,8 +1,13 @@
 import React from 'react'
 import './CatalogueSection.css'
 import { Button } from '../../../Button/Button'
+import { useNavigate } from 'react-router'
 
 export const CatalogueSection = () => {
+  const navigate = useNavigate()
+  const navigateHandler = () => {
+    navigate('/catalogue')
+  }
   return (
     <section className="catalogue-section">
       <div className="catalogue-section-container">
@@ -32,7 +37,7 @@ export const CatalogueSection = () => {
           <p>и ухаживать за Вашей кожей</p>
 
           <div className="button-component">
-            <Button title="Каталог" />
+            <Button onClick={navigateHandler} title="Каталог" />
           </div>
         </div>
       </div>
