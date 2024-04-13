@@ -78,6 +78,7 @@
   grid-template-areas: "product1 product2 product3 product4";
   justify-items: center;
   background-color: #ffff;
+  cursor: pointer;
 }
 
 .products-rows {
