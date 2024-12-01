@@ -21,6 +21,7 @@ export const ProductPage: React.FC<ProductPageType> = ({ id }) => {
   }, [])
 
   console.log(product)
+  console.log(id)
 
   const breadcrumbsItems = [
     {
