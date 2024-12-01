@@ -12,6 +12,7 @@ export const cataloguePageProducts: ProductsCatalogue[] = [
     volume: '200 ml',
     price: '870 руб.',
     tag: 'mousse',
+    productCode: 59039
   },
   {
     id: '2',
@@ -20,6 +21,7 @@ export const cataloguePageProducts: ProductsCatalogue[] = [
     volume: '200 ml',
     price: '870 руб.',
     tag: 'mousse',
+    productCode: 91871
   },
   {
     id: '3',
@@ -28,6 +30,7 @@ export const cataloguePageProducts: ProductsCatalogue[] = [
     volume: '200 ml',
     price: '870 руб.',
     tag: 'mousse',
+    productCode: 8892
   },
   {
     id: '4',
@@ -36,6 +39,7 @@ export const cataloguePageProducts: ProductsCatalogue[] = [
     volume: '200 ml',
     price: '1149 руб.',
     tag: 'mousse',
+    productCode: 88719
   },
 
   {
@@ -45,6 +49,7 @@ export const cataloguePageProducts: ProductsCatalogue[] = [
     volume: '200 ml',
     price: '990 руб.',
     tag: 'mousse',
+    productCode: 82019
   },
   {
     id: '6',
@@ -53,6 +58,7 @@ export const cataloguePageProducts: ProductsCatalogue[] = [
     volume: '200 ml',
     price: '990 руб.',
     tag: 'mousse',
+    productCode: 18282
   },
   {
     id: '7',
@@ -61,6 +67,7 @@ export const cataloguePageProducts: ProductsCatalogue[] = [
     volume: '275 ml',
     price: '790 руб.',
     tag: 'lotion',
+    productCode: 15672
   },
   {
     id: '8',
@@ -69,6 +76,7 @@ export const cataloguePageProducts: ProductsCatalogue[] = [
     volume: '200 ml',
     price: '790 руб.',
     tag: 'lotion',
+    productCode: 32510
   },
 
   {
@@ -78,6 +86,7 @@ export const cataloguePageProducts: ProductsCatalogue[] = [
     volume: '200 ml',
     price: '790 руб.',
     tag: 'lotion',
+    productCode: 7201
   },
   {
     id: '10',
@@ -86,6 +95,7 @@ export const cataloguePageProducts: ProductsCatalogue[] = [
     volume: '250 ml',
     price: '870 руб.',
     tag: 'lotion',
+    productCode: 30002
   },
   {
     id: '11',
@@ -94,6 +104,7 @@ export const cataloguePageProducts: ProductsCatalogue[] = [
     volume: '250 ml',
     price: '870 руб.',
     tag: 'lotion',
+    productCode: 92099
   },
   {
     id: '12',
@@ -102,6 +113,7 @@ export const cataloguePageProducts: ProductsCatalogue[] = [
     volume: '15 ml',
     price: '1290 руб.',
     tag: 'cosmetics',
+    productCode: 92783672
   },
   {
     id: '13',
@@ -110,6 +122,7 @@ export const cataloguePageProducts: ProductsCatalogue[] = [
     volume: '100 ml',
     price: '870 руб.',
     tag: 'cosmetics',
+    productCode: 62524
   },
   {
     id: '14',
@@ -118,6 +131,7 @@ export const cataloguePageProducts: ProductsCatalogue[] = [
     volume: '',
     price: '390 руб.',
     tag: 'accessories',
+    productCode: 82678
   },
   {
     id: '15',
@@ -126,6 +140,7 @@ export const cataloguePageProducts: ProductsCatalogue[] = [
     volume: '150 ml',
     price: '870 руб.',
     tag: 'spray',
+    productCode: 927251
   },
   {
     id: '16',
@@ -134,6 +149,7 @@ export const cataloguePageProducts: ProductsCatalogue[] = [
     volume: '150 ml',
     price: '870 руб.',
     tag: 'spray',
+    productCode: 6728
   },
   {
     id: '17',
@@ -142,5 +158,6 @@ export const cataloguePageProducts: ProductsCatalogue[] = [
     volume: '15 гр',
     price: '790 руб.',
     tag: 'cosmetics',
+    productCode: 54312
   },
 ]

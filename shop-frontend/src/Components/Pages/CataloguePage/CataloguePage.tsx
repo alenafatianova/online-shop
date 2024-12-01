@@ -2,12 +2,13 @@ import React, { useState } from 'react'
 import './CataloguePage.css'
 import banner from '../../../assets/Banner_texture.png'
 import { Breadcrumb } from 'antd'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { cataloguePageProducts } from './utils'
 
 export const CataloguePage = () => {
   const [filteredProducts, setFilteredProducts] = useState(cataloguePageProducts)
   const [selectedTag, setSelectedTag] = useState('')
+  const navigate = useNavigate()
 
   const breadcrumbsItems = [
     {
@@ -22,6 +23,10 @@ export const CataloguePage = () => {
     setSelectedTag(tag)
     const productsByTag = cataloguePageProducts.filter((product) => product.tag?.includes(tag))
     setFilteredProducts(productsByTag)
+  }
+
+  const onProductRedirectHandler = (id: string) => {
+   navigate(`/product/:${id}`)
   }
 
   return (
@@ -45,7 +50,7 @@ export const CataloguePage = () => {
 
       <div className="catalogue_products-rows">
         {filteredProducts.map((product) => (
-          <div key={product.id} className="products-rows">
+          <div key={product.id} className="products-rows" onClick={() =>onProductRedirectHandler(product.id)}>
             <img src={product.image} alt="Продукт для загара" />
             <p className="product_name">{product.title}</p>
             <p className="product_volume">{product.volume}</p>

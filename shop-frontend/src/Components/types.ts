@@ -4,6 +4,7 @@ export interface ProductType {
   image: string
   price: string
   volume: string
+  productCode?: number
 }
 export interface ImagesType {
   image: string
